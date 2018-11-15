@@ -17,11 +17,13 @@ int main(){
   char sl[] = "sl";
   char ls[] = "ls -l -a";
   char gt[] = "git commit -a -m 'my_program_did_this_commit_for_me_this_is_so_epic'";
-  char** args = parse_args(ls);
+  char** args = parse_args(sl);
   arg_printer(args);
+  execvp(args[0], args);
   free(args);
   args = parse_args(ls);
   arg_printer(args);
+  execvp(args[0], args);
   free(args);
   args = parse_args(gt);
   arg_printer(args);
