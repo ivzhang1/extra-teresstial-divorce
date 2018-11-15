@@ -20,11 +20,11 @@ int main(){
   char** args = parse_args(sl);
   arg_printer(args);
   execvp(args[0], args);
-  //free(args);
+  free(args);
   args = parse_args(ls);
   arg_printer(args);
   execvp(args[0], args);
-  //free(args);
+  free(args);
   args = parse_args(gt);
   arg_printer(args);
   execvp(args[0], args);
